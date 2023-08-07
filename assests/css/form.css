@@ -1,0 +1,76 @@
+.register {
+  width: 100%;
+  height: 100%;
+  background: url("../../images/top.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(2, 10, 10, 0.61);
+  padding: 2%;
+}
+
+.register .card {
+  width: 70%;
+  height: 30rem;
+  background-color: aliceblue;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  margin: 2% 13% 2% 13%;
+  display: inline-flex;
+}
+
+.register .card .sideimg {
+  border-radius: 16px 0px 0px 16px;
+  background: url("../../images/form.png");
+  background-color: #fff;
+  height: 100%;
+  width: 40%;
+}
+
+.register .card .form {
+  width: 56%;
+  padding: 2%;
+  background-color: #dddddd;
+  border-radius: 0 16px 16px 0;
+}
+
+.register .card .form form input {
+  margin-top: 3%;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  border-style: none;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+}
+
+.register .card .form form input:focus,
+select:focus {
+  border-bottom: 2px solid #007ee5;
+}
+
+.register .card .form form select {
+  width: 87%;
+  margin-top: 3%;
+  border-radius: 6px;
+  outline: none;
+  border-style: none;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  padding: 8px;
+}
+
+.btn1 {
+  padding: 16px;
+  width: 40%;
+  background-color: #007ee5 !important;
+  cursor: pointer;
+}
+
+.btn2 {
+  padding: 16px;
+  width: 40%;
+  background-color: orange !important;
+  cursor: pointer;
+}
