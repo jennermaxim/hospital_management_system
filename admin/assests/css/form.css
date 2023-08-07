@@ -28,14 +28,14 @@
   width: 40%;
 }
 
-.register .card .form {
+.form {
   width: 56%;
   padding: 2%;
   background-color: #dddddd;
   border-radius: 0 16px 16px 0;
 }
 
-.register .card .form form input {
+form input {
   margin-top: 3%;
   padding: 8px;
   border-radius: 6px;
@@ -43,15 +43,16 @@
   border-style: none;
   border-bottom: 2px solid #000;
   background-color: #fff;
+  width: 78.5%;
 }
 
-.register .card .form form input:focus,
+form input:focus,
 select:focus {
   border-bottom: 2px solid #007ee5;
 }
 
-.register .card .form form select {
-  width: 87%;
+form select {
+  width: 80%;
   margin-top: 3%;
   border-radius: 6px;
   outline: none;
@@ -61,7 +62,7 @@ select:focus {
   padding: 8px;
 }
 
-.btn1 {
+.btn {
   padding: 16px;
   width: 40%;
   background-color: #007ee5 !important;
@@ -74,5 +75,4 @@ select:focus {
   width: 40%;
   background-color: orange !important;
   cursor: pointer;
-  color: #fff;
 }
