@@ -5,13 +5,12 @@
         <center>
             <h1>ADD LOCATION</h1>
             <hr>
-            <br>
             <?php
             if (isset($_POST['submit'])) {
                 $location = $_POST['location'];
                 $insert = mysqli_query($conn, "insert into tbl_location(l_id, location) values(null, '" . $location . "')");
                 if ($insert) {
-                    echo "<font color='green' size='10px'>Inserted Successfully!</font>";
+                    echo "<span class='success'>Inserted Successfully!</span>";
                 } else {
                     echo "<font color='red' size='10px'>Failed to insert...!</font>" /* .mysqli_error($conn) */;
                 }
@@ -23,8 +22,8 @@
             </form>
             <br>
             <table width="80%" border="2px" style="border-collapse: collapse;">
-                <th colspan="3" style="padding: 15px; background-color: aqua;">LIST OF ADDED LOCATION</th>
-                <tr style="background-color: skyblue; padding: 10px">
+                <th colspan="3" style="padding: 15px; background-color: #fff;">LIST OF ADDED LOCATION</th>
+                <tr style="background-color: rgb(229, 224, 224); padding: 10px">
                     <th style="padding: 10px">#</th>
                     <th style="padding: 10px">Location</th>
                     <th style="padding: 10px">Action</th>
@@ -33,7 +32,7 @@
                 $select = mysqli_query($conn, "select * from tbl_location order by(l_id) desc limit 3");
                 while ($row = mysqli_fetch_array($select)) {
                     ?>
-                    <tr style="padding: 10px; background-color: beige;">
+                    <tr style="padding: 10px; background-color: #fff;">
                         <td style="padding: 10px">
                             <?php echo $row['l_id'] ?>
                         </td>

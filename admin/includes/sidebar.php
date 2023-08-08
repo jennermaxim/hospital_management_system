@@ -8,14 +8,14 @@
                 </ul>
             </div>
         </li>
-        <li>Year
+        <!-- <li>Year
         <div class="subtabs">
                 <ul>
                     <li><a href="add-year.php">Add Year</a></li>
                     <li><a href="#">View Year</a></li>
                 </ul>
             </div>
-        </li>
+        </li> -->
         <li>Doctor
         <div class="subtabs">
                 <ul>

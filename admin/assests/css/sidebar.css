@@ -2,7 +2,7 @@
     width: 15%;
     float: left;
     background-color: rgb(25, 24, 24);
-    height: 22.9rem;
+    height: calc(100vh - 104px);
     /* position: fixed; */
     overflow-y: auto;
 }

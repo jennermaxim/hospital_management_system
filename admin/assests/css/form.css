@@ -54,7 +54,7 @@ select:focus {
 
 form select {
   width: 80%;
-  margin-top: 3%;
+  margin-top: 1%;
   border-radius: 6px;
   outline: none;
   border-style: none;
@@ -76,8 +76,4 @@ form select {
   width: 40%;
   background-color: orange !important;
   cursor: pointer;
-}
-
-.margintop{
-  margin-top: 1%;
 }

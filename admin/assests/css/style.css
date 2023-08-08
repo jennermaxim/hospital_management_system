@@ -13,8 +13,8 @@
 
 .header .logo img {
   /* color: black; */
-  padding: 15px;
-  margin: 15px;
+  padding: 10px;
+  margin: 5px;
   float: left;
 }
 
@@ -24,8 +24,8 @@
 }
 
 .header .menutabs ul li {
-  padding: 15px;
-  margin: 15px;
+  padding: 10px;
+  margin: 5px;
   float: left;
 }
 
@@ -49,16 +49,16 @@
 .header .menutabs ul li:hover .subtub ul {
   position: absolute;
   background-color: #000;
-  margin-left: -15px;
+  margin-left: -10px;
   overflow: hidden;
 }
 
 .header .menutabs ul li:hover .subtub ul li {
-  margin: 5px;
+  /* margin: 5px; */
   padding: 5px;
   list-style: none;
   font: none;
-  width: 150px;
+  width: 100%;
 }
 
 .footer {
@@ -71,8 +71,8 @@
 }
 
 .footer div {
-  padding: 15px;
-  margin: 15px;
+  padding: 10px;
+  margin: 5px;
   color: aliceblue;
   text-align: center !important;
   align-items: center !important;
@@ -88,26 +88,15 @@
 }
 
 .main .workspace {
-  width: 76%;
-  height: 16rem;
+  width: 84.8%;
+  height: calc(100vh - 106px);
   background-color: rgb(229, 224, 224);
-  border-radius: 15px;
-  margin: 2%;
-  padding: 2%;
+  padding: 0.1%;
   float: left;
   overflow-y: auto;
 }
 
-.main .workspacedoctor,
-.main .workspacestaff {
-  padding-top: 0.5%;
-  height: 17.5rem;
-}
-
-.main .workspacestaff {
-  /* overflow-y: auto; */
-  margin: 1%;
-  height: 19.5rem;
-  padding-top: 0;
-  width: 79%;
+.main .workspace .success{
+  font-size: 15px;
+  color: green;
 }
