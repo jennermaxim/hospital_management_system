@@ -88,11 +88,26 @@
 }
 
 .main .workspace {
-  width: 75%;
+  width: 76%;
   height: 16rem;
   background-color: rgb(229, 224, 224);
   border-radius: 15px;
   margin: 2%;
   padding: 2%;
   float: left;
+  overflow-y: auto;
+}
+
+.main .workspacedoctor,
+.main .workspacestaff {
+  padding-top: 0.5%;
+  height: 17.5rem;
+}
+
+.main .workspacestaff {
+  /* overflow-y: auto; */
+  margin: 1%;
+  height: 19.5rem;
+  padding-top: 0;
+  width: 79%;
 }
