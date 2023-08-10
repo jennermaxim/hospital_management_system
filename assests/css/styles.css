@@ -12,8 +12,8 @@
 }
 
 .header .logo img {
-  padding: 16px;
-  margin: 16px;
+  padding: 10px;
+  margin: 5px;
   float: left;
 }
 
@@ -22,8 +22,8 @@
 }
 
 .header .menutabs ul li {
-  padding: 16px;
-  margin: 16px;
+  padding: 10px;
+  margin: 5px;
   float: left;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .footer div {
-  padding: 16px;
-  margin: 16px;
+  padding: 10px;
+  margin: 5px;
   color: aliceblue;
   text-align: center !important;
   align-items: center !important;

@@ -11,19 +11,18 @@
                 $specialization = $_POST['specialization'];
                 $gender = $_POST['gender'];
                 $location = $_POST['location'];
-                $update=mysqli_query($conn, "update tbl_doctor set doctor='".$doctor."', specialization='".$specialization."', g_id='".$gender."', l_id='".$location."' where doc_id ='".$_GET['doc']."'");
+                $update = mysqli_query($conn, "update tbl_doctor set doctor = '" . $doctor . "', specialization = '" . $specialization . "', g_id = '" . $gender . "', l_id = '" . $location . "' where doc_id = '" . $_GET['doc'] . "'");
                 if ($update) {
                     header('location:add-doctor.php');
                 } else {
                     echo "<span class='error'>Failed to Update...!</span>";
                 }
             }
+
+            $select = mysqli_query($conn, "select * from tbl_doctor, tbl_gender, tbl_location where(tbl_doctor.g_id = tbl_gender.g_id and tbl_doctor.l_id = tbl_location.l_id and tbl_doctor.doc_id = '" . $_GET['doc'] . "')");
+            $row = mysqli_fetch_array($select);
             ?>
             <form method="post">
-            <?php
-            $select=mysqli_query($conn,"select * from tbl_doctor, tbl_gender, tbl_location where(tbl_doctor.g_id=tbl_gender.g_id and tbl_doctor.l_id=tbl_location.l_id and tbl_doctor.doc_id='".$_GET['doc']."')");
-            $row=mysqli_fetch_array($select);
-            ?>
                 <input type="text" name="doctor" id="" autofocus required value="<?php echo $row['doctor']; ?>">
                 <input type="text" name="specialization" id="" value="<?php echo $row['specialization']; ?>">
                 <select name="gender" id="">

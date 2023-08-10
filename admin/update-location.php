@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
- ?>
+?>
 <div class="main">
     <?php include 'includes/sidebar.php'; ?>
     <div class="workspace">
@@ -12,16 +12,14 @@ ini_set('display_errors', 1);
             <?php
             if (isset($_POST['submit'])) {
                 $location = $_POST['location'];
-                $update = mysqli_query($conn, "update tbl_location set location = '" . $location . "' where l_id = '".$_GET['l']."'");
+                $update = mysqli_query($conn, "update tbl_location set location = '" . $location . "' where l_id = '" . $_GET['l'] . "'");
                 if ($update) {
                     header('location:add-location.php');
                 } else {
                     echo "<font color='red' size='10px'>Failed to Update...!</font>" /* .mysqli_error($conn) */;
                 }
             }
-            ?>
-            <?php
-            $select = mysqli_query($conn, "select * from tbl_location where l_id='".$_GET['l']."'");
+            $select = mysqli_query($conn, "select * from tbl_location where l_id='" . $_GET['l'] . "'");
             $row = mysqli_fetch_array($select);
             ?>
             <form method="post">

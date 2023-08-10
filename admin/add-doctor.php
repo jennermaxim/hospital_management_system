@@ -84,7 +84,7 @@
                                 onclick="return confirm('Are you sure you wanna delete <?php echo $row['doctor']; ?>')">
                                 Delete
                             </a>
-                            | <a href="update-doctor.php?doc=<?php echo $row['doc_id']; ?>">Update</a></td>
+                            <a href="update-doctor.php?doc=<?php echo $row['doc_id']; ?>">Update</a></td>
                     </tr>
                     <?php
                 }

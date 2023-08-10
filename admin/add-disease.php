@@ -39,9 +39,13 @@
                         <td style="padding: 10px">
                             <?php echo $row['disease'] ?>
                         </td>
-                        <td style="padding: 10px; text-align: center"><a href="delete-disease.php?d=<?php echo $row['d_id']; ?>"
-                                onclick="return confirm('Are you sure you wanna delete <?php echo $row['disease']; ?>')">Delete</a>
-                            | <a href="#">Update</a></td>
+                        <td style="padding: 10px; text-align: center"><a
+                                href="delete-disease.php?d=<?php echo $row['d_id']; ?>"
+                                onclick="return confirm('Are you sure you wanna delete <?php echo $row['disease']; ?>')">
+                                Delete
+                            </a>
+                            <a href="update-disease.php?d=<?php echo $row['d_id']; ?>">Update</a>
+                        </td>
                     </tr>
                     <?php
                 }

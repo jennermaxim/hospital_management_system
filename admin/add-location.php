@@ -46,7 +46,7 @@
                                 onclick="return confirm('Are you sure you wanna delete <?php echo $row['location']; ?>');">
                                 Delete
                             </a>
-                            | <a href="update-location.php?l=<?php echo $row['l_id']; ?>">Update</a>
+                            <a href="update-location.php?l=<?php echo $row['l_id']; ?>">Update</a>
                         </td>
                     </tr>
                     <?php

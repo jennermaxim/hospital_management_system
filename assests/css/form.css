@@ -76,3 +76,8 @@ select:focus {
   cursor: pointer;
   color: #fff;
 }
+
+.register .card .form .success{
+  font-size: 15px;
+  color: green;
+}

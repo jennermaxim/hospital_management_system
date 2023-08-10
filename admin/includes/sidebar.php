@@ -35,8 +35,7 @@
         <li>Patient
         <div class="subtabs">
                 <ul>
-                    <!-- <li><a href="#">Add Location</a></li> -->
-                    <li><a href="#">View Patient</a></li>
+                    <li><a href="view-patient.php">View Patient</a></li>
                 </ul>
             </div>
         </li>

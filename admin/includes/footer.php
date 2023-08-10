@@ -6,6 +6,6 @@
     </div>
 </footer>
 </body>
-<script src="assests/js/display.js"></script>
+<script src="assests/js/script.js"></script>
 
 </html>
