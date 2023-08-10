@@ -89,11 +89,12 @@
 
 .main .workspace {
   width: 84.8%;
-  height: calc(100vh - 106px);
+  height: calc(100vh - 120px);
   background-color: rgb(229, 224, 224);
   padding: 0.1%;
   float: left;
   overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 .main .workspace .success{

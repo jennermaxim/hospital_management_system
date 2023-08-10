@@ -7,4 +7,3 @@ setTimeout(() => {
     success[i].style.display = "none";
   }
 }, 5000);
-console.log(success);

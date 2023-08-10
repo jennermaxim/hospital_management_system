@@ -1,7 +1,9 @@
 <?php include 'includes/header.php'; ?>
 <div class="main">
     <div class="top">
-        <a href="register.php" class="hmbtn"><button>Register Now</button></a>
+        <a href="register.php" class="hmbtn">
+            <button>Register Now</button>
+        </a>
     </div>
     <div class="news">
         <div class="mainew">
@@ -31,6 +33,7 @@
                     </div>
                 </div>
             </a>
+            <!-- tfgyhiugyihujgyihu -->
             <a href="#">
                 <div class="new">
                     <div>
