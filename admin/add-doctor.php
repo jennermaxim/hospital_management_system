@@ -12,9 +12,9 @@
                 $gender = $_POST['gender'];
                 $location = $_POST['location'];
                 $insert = mysqli_query($conn, "insert into tbl_doctor(doc_id, doctor, g_id, l_id, specialization) values(null, '" . $doctor . "', '" . $gender . "', '" . $location . "', '" . $specialization . "')");
-                if($insert){
+                if ($insert) {
                     echo "<span class='success'>Inserted Successfully</span>";
-                } else{
+                } else {
                     echo "<span class='error'>Failed to insert...!</span>";
                 }
             }
@@ -79,7 +79,12 @@
                         <td style="padding: 10px">
                             <?php echo $row['location']; ?>
                         </td>
-                        <td style="padding: 10px; text-align: center"><a href="#">Delete</a> | <a href="#">Update</a></td>
+                        <td style="padding: 10px; text-align: center"><a
+                                href="delete-doctor.php?doc=<?php echo $row['doc_id']; ?>"
+                                onclick="return confirm('Are you sure you wanna delete <?php echo $row['doctor']; ?>')">
+                                Delete
+                            </a>
+                            | <a href="update-doctor.php?doc=<?php echo $row['doc_id']; ?>">Update</a></td>
                     </tr>
                     <?php
                 }

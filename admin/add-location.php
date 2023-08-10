@@ -30,16 +30,24 @@
                 </tr>
                 <?php
                 $select = mysqli_query($conn, "select * from tbl_location order by(l_id) desc limit 3");
+                $count = 0;
                 while ($row = mysqli_fetch_array($select)) {
+                    $count++;
                     ?>
                     <tr style="padding: 10px; background-color: #fff;">
                         <td style="padding: 10px">
-                            <?php echo $row['l_id'] ?>
+                            <?php echo $count; ?>
                         </td>
                         <td style="padding: 10px">
-                            <?php echo $row['location'] ?>
+                            <?php echo $row['location']; ?>
                         </td>
-                        <td style="padding: 10px; text-align: center"><a href="#">Delete</a> | <a href="#">Update</a></td>
+                        <td style="padding: 10px; text-align: center">
+                            <a href="delete-location.php?l=<?php echo $row['l_id']; ?>"
+                                onclick="return confirm('Are you sure you wanna delete <?php echo $row['location']; ?>');">
+                                Delete
+                            </a>
+                            | <a href="update-location.php?l=<?php echo $row['l_id']; ?>">Update</a>
+                        </td>
                     </tr>
                     <?php
                 }

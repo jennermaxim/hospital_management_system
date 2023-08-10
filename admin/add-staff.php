@@ -6,14 +6,14 @@
             <h1>ADD STAFF</h1>
             <hr>
             <?php
-            if(isset($_POST['submit'])){
+            if (isset($_POST['submit'])) {
                 $staff = $_POST['staff'];
                 $contact = $_POST['contact'];
                 $title = $_POST['title'];
                 $gender = $_POST['gender'];
                 $location = $_POST['location'];
-                $insert = mysqli_query($conn, "insert into tbl_staff(s_id, name, contact, title, g_id, l_id) values(null, '".$staff."', '".$contact."', '".$title."', '".$gender."', '".$location."')");
-                if($insert){
+                $insert = mysqli_query($conn, "insert into tbl_staff(s_id, name, contact, title, g_id, l_id) values(null, '" . $staff . "', '" . $contact . "', '" . $title . "', '" . $gender . "', '" . $location . "')");
+                if ($insert) {
                     echo "<span class='success'>Inserted Successfully</span>";
                 } else {
                     echo "<span class='error'>Failed to insert...!</span>";
@@ -28,7 +28,7 @@
                     <option value="" name="gender">Select Gender</option>
                     <?php
                     $select = mysqli_query($conn, "select * from tbl_gender");
-                    while($row = mysqli_fetch_assoc($select)){
+                    while ($row = mysqli_fetch_assoc($select)) {
                         ?>
                         <option value="<?php echo $row['g_id'] ?>"><?php echo $row['gender'] ?></option>
                         <?php
@@ -39,7 +39,7 @@
                     <option value="">Select Location</option>
                     <?php
                     $select = mysqli_query($conn, "select * from tbl_location");
-                    while($row = mysqli_fetch_assoc($select)){
+                    while ($row = mysqli_fetch_assoc($select)) {
                         ?>
                         <option value="<?php echo $row['l_id'] ?>"><?php echo $row['location'] ?></option>
                         <?php
@@ -85,7 +85,12 @@
                         <td style="padding: 10px">
                             <?php echo $row['location']; ?>
                         </td>
-                        <td style="padding: 10px; text-align: center"><a href="#">Delete</a> | <a href="#">Update</a></td>
+                        <td style="padding: 10px; text-align: center"><a
+                                href="delete-staff.php?s=<?php echo $row['s_id']; ?>"
+                                onclick="return confirm('Are you sure you wanna delete <?php echo $row['name']; ?>');">
+                                Delete
+                            </a>
+                            | <a href="#">Update</a></td>
                     </tr>
                     <?php
                 }
