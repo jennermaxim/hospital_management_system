@@ -1,3 +1,9 @@
+<?php session_start(); ?>
+<?php
+if(empty($_SESSION['login'])){
+    header('location:index.php');
+}
+?>
 <?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +26,8 @@
                 <li><a href="#">Admin</a>
                     <div class="subtub">
                         <ul>
-                            <li><a href="#">Change Password</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><a href="dashboard.php"><?php echo $_SESSION['admin']; ?></a></li>
+                            <li><a href="logout.php" onclick="return confirm('We are sorry to see you leave...!');">Logout</a></li>
                         </ul>
                     </div>
                 </li>

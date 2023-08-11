@@ -80,4 +80,7 @@ select:focus {
 .register .card .form .success{
   font-size: 15px;
   color: green;
+  background-color: rgba(0, 128, 0, 0.274);
+  border-radius: 5px;
+  padding: 5px;
 }
