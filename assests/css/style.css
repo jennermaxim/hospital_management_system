@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS CODE FOR THE HEADER */
+.header {
+  width: 100%;
+  background-color: #fff;
+  /* background-color: rgb(25, 24, 24); */
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+}
+
+.header .logo img {
+  padding: 10px;
+  margin: 5px;
+  float: left;
+}
+
+.header .menutabs {
+  float: right;
+}
+
+.header .menutabs ul li {
+  padding: 10px;
+  margin: 5px;
+  float: left;
+  list-style: none;
+}
+
+.header .menutabs ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header .menutabs ul li a:hover {
+  color: goldenrod;
+}
+
+.subtub {
+  display: none;
+}
+
+.header .menutabs ul li:hover .subtub {
+  display: block;
+}
+
+.header .menutabs ul li:hover .subtub ul {
+  position: absolute;
+  background-color: #000;
+  margin-left: -16px;
+  width: auto;
+}
+
+.header .menutabs ul li:hover .subtub ul li {
+  margin: 5px;
+  padding: 5px;
+  list-style: none;
+  font: none;
+}
+
+/* CSS CODE FOR THE FOOTER */
+.footer {
+  width: 100%;
+  /* background-color: #000; */
+  background-color: rgb(25, 24, 24);
+  display: block;
+  overflow: hidden;
+}
+
+.footer div {
+  padding: 10px;
+  margin: 5px;
+  color: aliceblue;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.footer div span {
+  color: #007ee5;
+}
+
+/* CSS CODE FOR CONTENT */
+/* .main {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+} */
+
+.main .top {
+  width: 100%;
+  height: 25rem;
+  background: url("../../images/top.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(2, 10, 10, 0.61);
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.main .top .hmbtn button {
+  margin: 15%;
+  width: 10%;
+  padding: 15px;
+  background-color: #007ee5;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 10px, rgba(200, 20, 200, 0.2);
+  cursor: pointer;
+  color: #fff;
+  border: none;
+}
+
+.main .top .hmbtn button:hover {
+  background-color: #007ee5b4;
+}
+
+.news {
+  width: 96%;
+  margin: 2%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.news .mainew {
+  width: 50%;
+  height: 30rem;
+  background-color: #dddddd;
+  float: left;
+  margin: 1%;
+  padding: 2%;
+}
+
+.news .newscart {
+  width: 32%;
+  height: 30rem;
+  background-color: #dddddd;
+  float: right;
+  margin: 1%;
+  padding: 8px;
+  border-radius: 16px;
+  overflow-y: auto;
+}
+
+.img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 16rem;
+  overflow: hidden;
+}
+
+.new {
+  display: inline-flex;
+  background-color: #fff;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 10px rgba(00, 00, 00, 0.2);
+}
+
+.new div img {
+  padding: 4px;
+  border-radius: 10px 0 0 10px;
+}
+
+.main .specialities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: #dddddd;
+}
+
+.main .specialities .cards {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  margin: 2%;
+}
+
+.main .specialities .cards .card {
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  flex-direction: column;
+  padding: 10px;
+  width: fit-content;
+  margin: 10px;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.main .specialities .btn {
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007ee5;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 0px 10px 10px, rgba(200, 20, 200, 0.2);
+}
+
+.main .specialities .btn:hover {
+  background-color: #007ee5b4;
+}
+
+.main .doctors {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.main .doctors .cards {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  gap: 2%;
+}
+
+.main .doctors .cards .card {
+  /* border: 1px solid #000; */
+  width: fit-content;
+  border-radius: 15px;
+  background-color: #dddddd;
+}
+
+.main .doctors .cards .card img {
+  border-radius: 15px 15px 0 0;
+}
+
+.main .doctors .cards .card .nametitle {
+  margin: 15px;
+}
+
+.main .doctors .cards .card .nametitle .title {
+  color: #5f5f5f;
+}
+
+.main .questioncard {
+  display: flex;
+  padding: 2%;
+}
+
+.main .questioncard .questions {
+  background-color: #dddddd;
+  border-radius: 15px;
+  padding: 2%;
+  overflow-y: auto;
+  height: 30rem;
+}
+
+.main .questioncard .questions .question {
+  background-color: #fff;
+  padding: 2%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 10px 10px rgba(00, 00, 00, 0.2);
+}
+
+hr {
+  color: #dddddd;
+}
+
+.main .questioncard .questions .question p {
+  color: #5f5f5f;
+}
+
+.main .comments {
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #dddddd;
+}
+
+.main .comments img {
+  border-radius: 50%;
+  width: 200px;
+  margin: 0 5%;
+}
+
+.main .comments .comment {
+  padding: 0 5%;
+}
+
+.main .comments .comment p {
+  margin: 2% 0;
+  color: #5f5f5f;
+}
+
+/* DASHBOARD CSS CODE */
+.dashboard {
+  display: flex;
+  height: calc(100vh - 57px);
+  margin-top: 57px;
+}
+
+.main .workspace{
+  /* height: 100vh; */
+  background-color: #dddddd;
+  width: 85%;
+}

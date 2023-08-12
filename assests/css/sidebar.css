@@ -1,0 +1,23 @@
+.main .sidebar {
+  background-color: rgb(25, 24, 24);
+  width: 15%;
+  /* height: 100vh; */
+  /* height: 100%; */
+  padding: 10px;
+}
+
+.main .sidebar ul{
+    color: #fff;
+}
+
+.main .sidebar ul li{
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    /* background-color: #000; */
+    /* margin: 5px; */
+}
+
+.main .sidebar ul li:hover {
+    background-color: #007ee5;
+}

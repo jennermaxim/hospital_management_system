@@ -16,7 +16,7 @@
             <fieldset>
                 <legend>Login</legend>
                 <h2>Hospital Management System</h2>
-                <form method="post">
+                <form method="post" action="dashboard-employee.php">
                     <input type="email" name="email" id="" placeholder="Enter Your Email" required autofocus>
                     <input type="password" name="password" id="" placeholder="Enter Your Password" required>
                     <div class="btn">
