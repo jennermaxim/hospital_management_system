@@ -1,8 +1,9 @@
 .sidebar{
-    width: 15%;
+    width: 17%;
     float: left;
     background-color: rgb(25, 24, 24);
-    height: calc(100vh - 104px);
+    /* height: calc(100vh - 57px); */
+    height: 100%;
     /* position: fixed; */
     overflow-y: auto;
 }
@@ -13,45 +14,81 @@
 
 .sidebar ul li{
     list-style: none;
-    width: 80%;
-    padding: 15px;
-    margin-top: 4px;
-    background-color: #000;
-    color: aliceblue;
+    /* width: 80%; */
+    /* padding: 10px; */
+    /* margin-top: 4px; */
+    /* background-color: #000; */
+    color: #fff;
 }
 
-.sidebar ul li:hover{
+.sidebar ul li span{
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.sidebar ul li span:hover{
+    background-color: #007ee5;
+}
+
+/* .sidebar ul li:hover{
     background-color: rgb(52, 50, 50); 
     cursor: pointer;
     color: goldenrod;
-    /* text-transform: uppercase; */
-}
+    text-transform: uppercase;
+} */
 
-.sidebar ul li .subtabs{
+/* .sidebar ul li .subtabs{
     display: none;
-}
+} */
 
-.sidebar ul li:hover .subtabs{
+/* .sidebar ul li:hover .subtabs{
     display: block;
-}
+} */
 
-.sidebar ul li:hover .subtabs ul{
+/* .sidebar ul li:hover .subtabs ul{
     background-color: antiquewhite;
     padding: 0.01%;
-}
+} */
 
-.sidebar ul li:hover .subtabs ul li{
+/* .sidebar ul li:hover .subtabs ul li{
     background-color: transparent;
     padding: 2%;
-}
-
+} */
+/* 
 .sidebar ul li:hover .subtabs li a{
     text-decoration: none;
     color: #000;
-}
+} */
 
-.sidebar ul li:hover .subtabs li:hover, .sidebar ul li .subtabs a:hover{
+/* .sidebar ul li:hover .subtabs li:hover, .sidebar ul li .subtabs a:hover{
     background-color: rgb(216, 206, 206);
     width: auto;
+} */
+
+.sidebar ul li ul{
+    padding: 10px;
+    background-color: #000;
 }
 
+.sidebar ul li ul li a{
+    padding: 10px;
+    display: block;
+}
+
+.sidebar ul li ul li a:hover{
+    background-color: #007ee5;
+}
+
+.sidebar ul li ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.submenubar{
+    display: none;
+}
+
+.show{
+    display: block;
+}

@@ -6,18 +6,55 @@
   padding: 10px;
 }
 
-.main .sidebar ul{
-    color: #fff;
+.main .sidebar ul {
+  color: #fff;
 }
 
-.main .sidebar ul li{
-    list-style: none;
+.main .sidebar ul li {
+  list-style: none;
+}
+
+
+.main .sidebar ul li .dropdown{
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.main .sidebar ul li .dropdown:hover{
+  background-color: #007ee5;
+}
+
+.main .sidebar ul li span a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+
+.main .sidebar ul li a:hover {
+  background-color: #007ee5;
+}
+
+.main .sidebar ul li ul{
+    background-color: #000;
     padding: 10px;
-    cursor: pointer;
-    /* background-color: #000; */
-    /* margin: 5px; */
 }
 
-.main .sidebar ul li:hover {
-    background-color: #007ee5;
+.main .sidebar ul li ul li a{
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main .sidebar ul li ul li a:hover{
+  background-color: #007ee5;
+}
+
+.submenubar {
+  display: none;
+}
+.show {
+  display: block;
 }

@@ -5,6 +5,4 @@
     <div class="workspace">
     </div>
 </div>
-</body>
-
-</html>
+<?php include 'includes/footer.php'; ?>

@@ -20,7 +20,7 @@ if(empty($_SESSION['login'])){
 
 <body>
     <nav class="header">
-        <div class="logo"><img src="images/logo.png" alt="" width=20%></div>
+        <div class="logo"><img src="images/logo.jpeg" alt="" width=20%></div>
         <div class="menutabs">
             <ul>
                 <li><a href="#">Admin</a>

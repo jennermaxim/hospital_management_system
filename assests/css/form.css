@@ -84,3 +84,53 @@ select:focus {
   border-radius: 5px;
   padding: 5px;
 }
+
+.form {
+  width: 56%;
+  padding: 2%;
+  background-color: #dddddd;
+  border-radius: 0 16px 16px 0;
+  /* padding-top: 1px; */
+}
+
+form input {
+  margin-top: 1%;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  border-style: none;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  width: 78.5%;
+}
+
+form input:focus,
+select:focus {
+  border-bottom: 2px solid #007ee5;
+}
+
+form select {
+  width: 80%;
+  margin-top: 1%;
+  border-radius: 6px;
+  outline: none;
+  border-style: none;
+  border-bottom: 2px solid #000;
+  background-color: #fff;
+  padding: 8px;
+}
+
+.btn {
+  padding: 16px;
+  width: 40%;
+  background-color: #007ee5 !important;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn2 {
+  padding: 16px;
+  width: 40%;
+  background-color: orange !important;
+  cursor: pointer;
+}

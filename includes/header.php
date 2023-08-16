@@ -9,9 +9,9 @@
     <link rel="shortcut icon" href="images/favicon.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="assests/css/style.css" type="text/css">
     <link rel="stylesheet" href="assests/css/form.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="assests/css/sidebar.css">
 </head>
 
@@ -20,8 +20,8 @@
         <div class="logo"><img src="images/logo.jpeg" alt="" width=20%></div>
         <div class="menutabs">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="register.php">Register</a></li>
+                <!-- <li><a href="index.php">Home</a></li> -->
+                <!-- <li><a href="register.php">Register</a></li> -->
                 <li><a href="#">My Account</a>
                     <div class="subtub">
                         <ul>

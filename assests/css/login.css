@@ -53,6 +53,10 @@ body {
   font-size: large;
 }
 
+.main .error{
+  color: red;
+}
+
 /* RESPONSIVENESS CSS CODE */
 @media screen and (max-width: 500px) {
   .main fieldset {

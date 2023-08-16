@@ -5,10 +5,11 @@
 
 .header {
   width: 100%;
-  background-color: #000;
+  background-color: #fff;
   display: block;
   overflow: hidden;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
 }
 
 .header .logo img {
@@ -27,16 +28,22 @@
   padding: 10px;
   margin: 5px;
   float: left;
+  list-style: none;
+  /* color: #000; */
+}
+
+.header .menutabs ul li:hover{
+  background-color: #007ee5;
 }
 
 .header .menutabs ul li a {
-  color: aliceblue;
+  color: #000;
   text-decoration: none;
 }
 
-.header .menutabs ul li a:hover {
+/* .header .menutabs ul li a:hover {
   color: goldenrod;
-}
+} */
 
 .subtub {
   display: none;
@@ -84,17 +91,19 @@
 
 .main {
   width: 100%;
-  display: block;
+  display: flex;
+  margin-top: 57px;
+  height: calc(100vh - 57px);
 }
 
 .main .workspace {
-  width: 84.8%;
-  height: calc(100vh - 120px);
+  width: 83%;
+  height: calc(100% - 20px);
   background-color: rgb(229, 224, 224);
-  padding: 0.1%;
-  float: left;
+  padding: 10px;
+  /* float: left; */
   overflow-y: auto;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .main .workspace .success{
@@ -127,4 +136,28 @@
 }
 .main .workspace table tr td a:last-child:hover{
   background-color: rgb(0, 0, 255);
+}
+
+.view-added{
+  width: 80%;
+  overflow-x: auto;
+  border: 1px solid #000;
+  /* padding: 10px; */
+}
+
+.main .workspace table{
+  background-color: #fff;
+  /* width: 80%; */
+  /* margin: 10px; */
+}
+
+.main .workspace table, th, td{
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+.main .workspace table .second-th{
+  background-color: #dddddd;
 }
