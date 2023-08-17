@@ -1,4 +1,4 @@
-<div class="sidebar employee">
+<div class="sidebar employee" id="sidebar">
     <ul>
         <li><span><a href="dashboard-employee.php">Dashboard</a></span></li>
         <li><span class="dropdown" onclick="displayPatient();">Patient</span>

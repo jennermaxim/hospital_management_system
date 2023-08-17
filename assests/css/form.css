@@ -94,7 +94,7 @@ select:focus {
 }
 
 form input {
-  margin-top: 1%;
+  margin-top: 10px;
   padding: 8px;
   border-radius: 6px;
   outline: none;
@@ -111,7 +111,7 @@ select:focus {
 
 form select {
   width: 80%;
-  margin-top: 1%;
+  margin-top: 10px;
   border-radius: 6px;
   outline: none;
   border-style: none;
@@ -133,4 +133,18 @@ form select {
   width: 40%;
   background-color: orange !important;
   cursor: pointer;
+}
+
+/* RESPONSIVENESS CODE */
+@media screen and (max-width: 600px) {
+  form{
+    width: 90%;
+  }
+  
+  form input{
+    width: 90%;
+  }
+  form select{
+    width: 95%;
+  }
 }

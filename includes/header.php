@@ -17,7 +17,8 @@
 
 <body>
     <nav class="header">
-        <div class="logo"><img src="images/logo.jpeg" alt="" width=20%></div>
+        <div class="menu" onclick="displayMenu();"><img src="images/menu.png" alt="" width=30px></div>
+        <div class="logo"><img src="images/logo.jpeg" alt="" width=250px></div>
         <div class="menutabs">
             <ul>
                 <!-- <li><a href="index.php">Home</a></li> -->

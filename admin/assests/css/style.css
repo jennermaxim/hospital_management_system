@@ -12,6 +12,10 @@
   top: 0;
 }
 
+.header .menu{
+  display: none;
+}
+
 .header .logo img {
   /* color: black; */
   padding: 10px;
@@ -147,7 +151,7 @@
 
 .main .workspace table{
   background-color: #fff;
-  /* width: 80%; */
+  width: 80%;
   /* margin: 10px; */
 }
 
@@ -160,4 +164,61 @@
 
 .main .workspace table .second-th{
   background-color: #dddddd;
+}
+
+/* RESPONSIVENESS CODE */
+@media screen and (max-width: 850px) {
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .header .menu{
+    display: block;
+    cursor: pointer;
+  }
+
+  .header .logo img {
+    padding: 0;
+    margin: 0;
+    /* float: left; */
+  }
+
+  .header .menutabs ul li {
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .main .workspace {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .header{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header .logo img {
+    margin-right: 20px;
+    float: right;
+  }
+
+  .header .menutabs{
+    display: none;
+  }
+
+  .main .workspace{
+    height: 100%;
+    padding: 0;
+    /* overflow: hidden; */
+  }
+
+  .main .workspace h1{
+    font-size: 30px;
+  }
 }

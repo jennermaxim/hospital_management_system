@@ -1,6 +1,6 @@
 .main .sidebar {
   background-color: rgb(25, 24, 24);
-  width: 15%;
+  width: 18%;
   /* height: 100vh; */
   /* height: 100%; */
   padding: 10px;
@@ -57,4 +57,32 @@
 }
 .show {
   display: block;
+}
+
+/* RESPONSIVENESS CODE */
+@media screen and (max-width:850px) {
+  .sidebar{
+    display: none;
+    width: 50%;
+  }
+
+  .main .sidebar{
+    width: 30%;
+  }
+
+  .show {
+    display: block;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .main{
+    display: block;
+  }
+  .main .sidebar{
+    width: 95%;
+    text-align: center;
+    padding: 2.5%;
+    /* padding-right: 20px; */
+  }
 }

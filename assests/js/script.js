@@ -1,6 +1,12 @@
 let success = document.querySelectorAll(".success");
 let error = document.querySelectorAll(".error");
 let i;
+let sidebar = document.querySelector("#sidebar");
+
+let displayMenu = () => {
+  sidebar.classList.toggle("show");
+};
+
 setTimeout(() => {
   for (i = 0; i < success.length; i++) {
     success[i].style.display = "none";

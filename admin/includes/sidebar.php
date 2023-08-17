@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" id="sidebar">
     <ul>
         <li>
             <span onclick="displayEmployee();">Employee</span>
