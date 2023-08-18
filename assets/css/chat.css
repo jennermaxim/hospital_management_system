@@ -1,0 +1,133 @@
+.chat {
+  background-color: #fff;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.chat .contacts {
+  width: 40%;
+  background-color: #007ee5;
+}
+
+.chat .contacts .profile {
+  display: flex;
+  /* border-bottom: 1px solid #000; */
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background-color: #0061b1;
+}
+
+.chat .contacts .profile .img {
+  height: fit-content;
+  width: fit-content;
+}
+
+.chat .contacts .profile .img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chat .contacts .profile .name {
+  color: #fff;
+}
+
+.chat .contacts .form {
+  width: 100%;
+  background-color: #0061b1;
+  border-bottom: 1px solid #888888;
+}
+
+.chat .contacts form {
+  /* width: 100%; */
+  /* padding-top: 0px; */
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.chat .contacts form input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.chat .contacts .user-contact {
+  overflow: auto;
+  height: calc(100vh - 201px);
+}
+
+.chat .contacts .user-contact .contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #888;
+  cursor: pointer;
+}
+
+.chat .contacts .user-contact .contact:hover {
+  background-color: #0061b1;
+}
+
+.chat .contacts .user-contact .contact .img-name-message {
+  display: flex;
+  align-items: center;
+}
+
+.chat .contacts .user-contact .contact img {
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+}
+
+.chat .contacts .user-contact .contact .name-message {
+  padding-left: 10px;
+  color: #fff;
+  overflow: hidden;
+  /* max-width: 20%; */
+}
+
+.chat .contacts .user-contact .contact .name-message .last-message{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat .contacts .user-contact .contact .time {
+  color: #ddd;
+}
+
+.chat .contact-messages {
+  width: 60%;
+}
+
+.chat .contact-messages .message-bar{
+    background-color: #007ee5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat .contact-messages .message-bar .contact-profile{
+    display: flex;
+    align-items: center;
+}
+
+.chat .contact-messages .message-bar .contact-profile .img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* RESPONSIVENESS CODE */
+@media screen and (max-width: 600px) {
+  .chat .contacts {
+    width: 100%;
+  }
+  .chat .contact-messages {
+    display: none;
+  }
+}
+

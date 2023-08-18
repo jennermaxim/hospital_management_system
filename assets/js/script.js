@@ -16,12 +16,6 @@ setTimeout(() => {
   }
 }, 5000);
 
-// let patient = document.getElementById("patient");
-// let subpatient = document.getElementById("subpatient");
-// patient.onclick = () => {
-//   subpatient.classList.toggle("show");
-// }
-
 let displayPatient = () => {
   document.getElementById("subpatient").classList.toggle("show");
 }
