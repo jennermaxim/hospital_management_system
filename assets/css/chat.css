@@ -54,8 +54,12 @@
 }
 
 .chat .contacts .user-contact {
-  overflow: auto;
+  overflow-y: auto;
   height: calc(100vh - 201px);
+}
+
+.chat .contacts .user-contact::-webkit-scrollbar{
+  width: 10px;
 }
 
 .chat .contacts .user-contact .contact {
@@ -100,6 +104,8 @@
 
 .chat .contact-messages {
   width: 60%;
+  position: relative;
+  background-color: rgb(178, 178, 255);
 }
 
 .chat .contact-messages .message-bar{
@@ -119,9 +125,93 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat .contact-messages .message-bar .contact-profile .name{
+  color: #fff;
+}
+
+.chat .contact-messages .message-bar .icons img{
+  cursor: pointer;
+}
+
+.chat .contact-messages .message-bar .icons img:first-child{
+  margin-right: 10px;
+}
+
+.chat .contact-messages .messages{
+  overflow-y: auto;
+  height: calc(100vh - 220px);
+}
+
+.chat .contact-messages .messages div p{
+  padding: 10px;
+  margin: 10px;
+  max-width: calc(100% - 150px);
+  color: #fff;
+}
+
+.chat .contact-messages .messages .outgoing p{
+  background-color: #3288ce;
+  border-radius: 10px 10px 10px 0;
+}
+
+.chat .contact-messages .messages .incoming{
+  display: flex;
+  /* padding-right: 50px; */
+}
+
+.chat .contact-messages .messages .incoming p{
+  background-color: rgb(0, 0, 192);
+  border-radius: 10px 10px 0 10px;
+  /* margin-right: 0; */
+  /* float: right; */
+  margin-left: auto;
+}
+
+.chat .contact-messages form{
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background-color: #0061b1;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.chat .contact-messages form input{
+  width: 100%;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.chat .contact-messages form button{
+  margin-right: 20px;
+  background-color: #008cff;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chat .contact-messages form button:hover{
+  background-color: #007ee5;
 }
 
 /* RESPONSIVENESS CODE */
+@media screen and (max-width: 850px){
+  .hide{
+    display: none;
+  }
+
+  .chat .size{
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .chat .contacts {
     width: 100%;

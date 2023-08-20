@@ -1,4 +1,21 @@
-<?php include 'includes/config.php' ?>
+<?php
+include 'includes/config.php';
+if(isset($_POST['submit'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $select = mysqli_query($conn, "select * from tbl_administrator where email = '".$email."' and password = '".md5($password)."'");
+    if($row = mysqli_fetch_array($select)){
+        session_start();
+        $_SESSION['login'] = $row['a_id'];
+        $_SESSION['admin'] = $row['admin'];
+        $_SESSION['email'] = $row['email'];
+        $_SESSION['contact'] = $row['contact'];
+        header('location:dashboard.php');
+    } else{
+            echo "<span color='red' class='error'><legend class='error'>Ooops! Email or Password is incorrect!</legend></span>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,23 +26,34 @@
     <link rel="shortcut icon" href="images/favicon.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="assests/css/form.css" type="text/css">
     <style>
+        body{
+            background-color: rgb(223, 223, 223);
+        }
         fieldset {
-            width: 60%;
+            width: 510px;
             margin-top: 10%;
             border-radius: 16px;
-            background-color: gray;
+            background-color: #fff;
+            border: 1px solid #007ee5;
         }
 
         legend {
             text-align: center;
             padding: 8px;
-            background-color: burlywood;
-            width: 10%;
+            background-color: #007ee5;
+            /* width: 10%; */
             margin: 0;
             border-radius: 16px;
+            color: #fff;
         }
         .error{
             width: 50%;
+        }
+
+        @media screen and (max-width:520px){
+            fieldset{
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -35,23 +63,6 @@
         <center>
             <fieldset>
                 <legend>LOGIN</legend>
-                <?php
-                if(isset($_POST['submit'])){
-                    $email = $_POST['email'];
-                    $password = $_POST['password'];
-                    $select = mysqli_query($conn, "select * from tbl_administrator where email = '".$email."' and password = '".md5($password)."'");
-                    if($row = mysqli_fetch_array($select)){
-                        session_start();
-                        $_SESSION['login'] = $row['a_id'];
-                        $_SESSION['admin'] = $row['admin'];
-                        $_SESSION['email'] = $row['email'];
-                        $_SESSION['contact'] = $row['contact'];
-                        header('location:dashboard.php');
-                    } else{
-                        echo "<span color='red' class='error'><legend class='error'>Ooops! Email or Password is incorrect!</legend></span>";
-                    }
-                }
-                ?>
                 <form method="post">
                     <input type="email" name="email" placeholder="Enter your Email" id="" required autofocus>
                     <input type="password" name="password" id="" placeholder="password" required>

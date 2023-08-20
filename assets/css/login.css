@@ -31,6 +31,12 @@ body {
   border: none;
   padding: 10px;
   width: 90%;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+.main fieldset form input:focus {
+  border-bottom: 2px solid #007ee5;
 }
 
 .main fieldset form .btn {
@@ -53,7 +59,7 @@ body {
   font-size: large;
 }
 
-.main .error{
+.main .error {
   color: red;
 }
 
