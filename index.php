@@ -7,6 +7,8 @@ if (isset($_POST['submit'])) {
     if ($row = mysqli_fetch_array($select)) {
         session_start();
         $_SESSION['login'] = $row['employee_id'];
+        $_SESSION['fname'] = $row['fname'];
+        $_SESSION['lname'] = $row['lname'];
         header('location:dashboard-employee.php');
     } else {
         echo "<span class='error'>Ooops! Email or password is incorrect...!</span>";
@@ -33,11 +35,16 @@ if (isset($_POST['submit'])) {
 
                 <form method="post">
                     <input type="email" name="email" id="" placeholder="Enter Your Email" required autofocus>
-                    <input type="password" name="password" id="" placeholder="Enter Your Password" required>
+                    <div class="password">
+                        <input type="password" name="password" id="" placeholder="Enter Your Password" required>
+                        <img src="images/visible.png" alt="">
+                    </div>
                     <div class="btn">
                         <input type="submit" value="Login" name="submit">
                         <input type="reset" value="Reset">
                     </div>
+                    <span>use the employee@gmail.com password:1234 to login</span>
+                    <span>Wanna login as an admin? <a href="admin">Click here</a></span>
                 </form>
             </fieldset>
         </center>

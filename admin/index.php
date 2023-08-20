@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="images/favicon.jpeg" type="image/jpeg">
-    <link rel="stylesheet" href="assests/css/form.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/form.css" type="text/css">
     <style>
         body{
             background-color: rgb(223, 223, 223);

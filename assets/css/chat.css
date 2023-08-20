@@ -201,6 +201,15 @@
   background-color: #007ee5;
 }
 
+.chat .contact-messages .nomessage{
+  text-align: center;
+  color: #888;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 10px;
+}
+
 /* RESPONSIVENESS CODE */
 @media screen and (max-width: 850px){
   .hide{

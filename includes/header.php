@@ -1,4 +1,10 @@
-<?php include 'config.php' ?>
+<?php session_start(); ?>
+<?php
+if (empty($_SESSION['login'])) {
+    header('location:index.php');
+}
+include 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +27,7 @@
             <ul>
                 <!-- <li><a href="index.php">Home</a></li> -->
                 <!-- <li><a href="register.php">Register</a></li> -->
-                <li><a href="#">My Account</a>
+                <li><a href="#">Hi, <?php echo $_SESSION['fname']; ?></a>
                     <div class="subtub">
                         <ul>
                             <li><a href="#">Profile</a></li>

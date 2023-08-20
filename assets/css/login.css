@@ -39,6 +39,24 @@ body {
   border-bottom: 2px solid #007ee5;
 }
 
+.main fieldset form .password{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.main fieldset form .password input{
+  width: 90%;
+}
+
+.main fieldset form .password img{
+  position: absolute;
+  right: 5%;
+  top: 35%;
+  cursor: pointer;
+}
+
 .main fieldset form .btn {
   display: flex;
 }

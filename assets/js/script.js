@@ -4,6 +4,8 @@ let i;
 let sidebar = document.querySelector("#sidebar");
 let messages = document.querySelectorAll(".contact-messages");
 let contacts = document.querySelectorAll(".contacts");
+let password = document.querySelector(".main fieldset form .password input");
+let showpassword = document.querySelector(".main fieldset form .password img");
 
 let displayMenu = () => {
   sidebar.classList.toggle("show");
@@ -36,4 +38,14 @@ let displayAppoitment = () => {
 
 let displayBloodGroup = () => {
   document.getElementById("subbloodgroup").classList.toggle("show");
+};
+
+showpassword.onclick = () => {
+  if (password.type == "password") {
+    password.type = "text";
+    showpassword.src = "images/hide.png";
+  } else {
+    password.type = "password";
+    showpassword.src = "images/visible.png";
+  }
 };
