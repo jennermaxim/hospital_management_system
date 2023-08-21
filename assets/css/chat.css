@@ -58,6 +58,10 @@
   height: calc(100vh - 201px);
 }
 
+.chat .contacts .user-contact a{
+  text-decoration: none;
+}
+
 .chat .contacts .user-contact::-webkit-scrollbar{
   width: 10px;
 }
@@ -152,17 +156,17 @@
   color: #fff;
 }
 
-.chat .contact-messages .messages .outgoing p{
+.chat .contact-messages .messages .incoming p{
   background-color: #3288ce;
   border-radius: 10px 10px 10px 0;
 }
 
-.chat .contact-messages .messages .incoming{
+.chat .contact-messages .messages .outgoing{
   display: flex;
   /* padding-right: 50px; */
 }
 
-.chat .contact-messages .messages .incoming p{
+.chat .contact-messages .messages .outgoing p{
   background-color: rgb(0, 0, 192);
   border-radius: 10px 10px 0 10px;
   /* margin-right: 0; */
@@ -188,13 +192,15 @@
   margin-right: 10px;
 }
 
-.chat .contact-messages form button{
+.chat .contact-messages form input[type="submit"]{
   margin-right: 20px;
   background-color: #008cff;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
+  color: #fff;
+  width: 50px;
 }
 
 .chat .contact-messages form button:hover{

@@ -49,4 +49,4 @@ if (isset($_POST['submit'])) {
             </fieldset>
         </center>
     </div>
-    <?php include 'includes/footer.php' ?>
+    <script src="assets/js/login.js"></script>
