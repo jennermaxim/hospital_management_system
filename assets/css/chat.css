@@ -17,6 +17,7 @@
   padding: 10px;
   align-items: center;
   background-color: #0061b1;
+  padding-bottom: 0;
 }
 
 .chat .contacts .profile .img {

@@ -21,9 +21,24 @@
                 </div>
                 <div class="user-contact">
                     <?php
-                    $select = mysqli_query($conn, "select * from tbl_employee where employee_id != '" . $_SESSION['login'] . "'");
+                    if (isset($_POST['submit'])) {
+                        $message = $_POST['message'];
+                        $insert = mysqli_query($conn, "insert into tbl_message(message_id, sender_id, receiver_id, message) values(null, '" . $_SESSION['login'] . "', '" . $_GET['em'] . "', '{$message}')");
+                        if (!$insert) {
+                            echo "<span class='error'>Failed to Send Message..!</span>";
+                        }
+                    }
+                    $select = mysqli_query($conn, "select * from tbl_message where (sender_id = '" . $_SESSION['login'] . "' or receiver_id = '" . $_SESSION['login'] . "' and sender_id = '" . $_GET['em'] . "' or receiver_id = '" . $_GET['em'] . "') order by message_id desc limit 1");
+                    while ($rowm = mysqli_fetch_assoc($select)) {
+                        if (mysqli_num_rows($select) > 0) {
+                            $lastmessage = $rowm['message'];
+                        } else {
+                            $lastmessage = "No message available";
+                        }
+                    }
+                    $select = mysqli_query($conn, "select * from tbl_employee where tbl_employee.employee_id != '" . $_SESSION['login'] . "'");
                     while ($row = mysqli_fetch_assoc($select)) {
-                        if (!empty($row)) {
+                        if (mysqli_num_rows($select) > 0) {
                             ?>
                             <a href="messages.php?em=<?php echo $row['employee_id']; ?>">
                                 <div class="contact">
@@ -34,7 +49,9 @@
                                                 <?php echo $row['fname'] . ' ' . $row['lname']; ?>
                                             </div>
                                             <div class="last-message">
-                                                <p>Hi, How are you doing</p>
+                                                <p>
+                                                    <?php echo $lastmessage; ?>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -53,6 +70,7 @@
                 <?php
                 $select = mysqli_query($conn, "select * from tbl_employee where (employee_id != '" . $_SESSION['login'] . "' and employee_id = '" . $_GET['em'] . "')");
                 $row = mysqli_fetch_array($select);
+                $_SESSION['receiver'] = $_GET['em'];
                 ?>
                 <div class="message-bar">
                     <div class="contact-profile">
@@ -68,38 +86,7 @@
                     </div>
                 </div>
                 <div class="messages">
-                    <?php
-                    if (isset($_POST['submit'])) {
-                        $message = $_POST['message'];
-                        $insert = mysqli_query($conn, "insert into tbl_message(message_id, sender_id, receiver_id, message) values(null, '" . $_SESSION['login'] . "', '" . $_GET['em'] . "', '{$message}')");
-                        if (!$insert) {
-                            echo "<span class='error'>Failed to Send Message..!</span>";
-                            // header('location:messages.php');
-                        } // else {
-                        //     echo "<span class='error'>Failed to Send Message..!</span>";
-                        // }
-                    }
-                    $select = mysqli_query($conn, "select * from tbl_message where (sender_id = '" . $_SESSION['login'] . "' and receiver_id = '" . $_GET['em'] . "' or sender_id = '" . $_GET['em'] . "' or receiver_id = '" . $_SESSION['login'] . "')");
-                    while ($row = mysqli_fetch_array($select)) {
-                        if ($row['sender_id'] === $_SESSION['login']) {
-                            ?>
-                            <div class="outgoing">
-                                <p>
-                                    <?php echo $row['message']; ?>
-                                </p>
-                            </div>
-                            <?php
-                        } elseif ($row['sender_id'] === $_GET['em']) {
-                            ?>
-                            <div class="incoming">
-                                <p>
-                                    <?php echo $row['message']; ?>
-                                </p>
-                            </div>
-                            <?php
-                        }
-                    }
-                    ?>
+                    <div class="chat-box"></div>
                     <form method="post">
                         <input type="text" name="message" id="" required autofocus>
                         <input type="submit" value="send" name="submit">
@@ -109,4 +96,5 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/chat.js"></script>
     <?php include 'includes/footer.php'; ?>

@@ -4,7 +4,6 @@ let i;
 let sidebar = document.querySelector("#sidebar");
 let messages = document.querySelectorAll(".contact-messages");
 let contacts = document.querySelectorAll(".contacts");
-let messagescroll = document.querySelector(".messages");
 
 let displayMenu = () => {
   sidebar.classList.toggle("show");
@@ -17,6 +16,14 @@ let displayMenu = () => {
     contacts[i].classList.toggle("size");
   }
 };
+
+let profile = document.querySelector("#profile");
+let profiledropdown = document.querySelector("#profiledropdown");
+
+profile.onclick = () => {
+  profiledropdown.classList.toggle("show");       
+}
+
 
 setTimeout(() => {
   for (i = 0; i < success.length; i++) {
@@ -38,8 +45,3 @@ let displayAppoitment = () => {
 let displayBloodGroup = () => {
   document.getElementById("subbloodgroup").classList.toggle("show");
 };
-
-window.onload = () => {
-let height = messagescroll.scrollHeight;
-messagescroll.scrollTo(0, height);
-}

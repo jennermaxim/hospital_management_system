@@ -27,14 +27,16 @@ include 'config.php';
             <ul>
                 <!-- <li><a href="index.php">Home</a></li> -->
                 <!-- <li><a href="register.php">Register</a></li> -->
-                <li><a href="#">Hi, <?php echo $_SESSION['fname']; ?></a>
-                    <div class="subtub">
-                        <ul>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Profile</a></li>
-                        </ul>
-                    </div>
+                <li><a href="#" id="profile">Hi,
+                        <?php echo $_SESSION['fname']; ?>
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
+    <div class="profiledropdown" id="profiledropdown">
+        <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">logout</a></li>
+        </ul>
+    </div>
