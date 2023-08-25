@@ -1,5 +1,6 @@
 <?php
 include 'includes/config.php';
+$error = "";
 if (isset($_POST['submit'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -10,7 +11,6 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
     $title = $_POST['title'];
-    $error = "";
     if ($password === $cpassword) {
         $select_email = mysqli_query($conn, "select email from tbl_employee where email = '" . $email . "'");
         if (mysqli_num_rows($select_email) > 0) {

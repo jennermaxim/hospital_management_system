@@ -1,9 +1,9 @@
 <?php
 include 'includes/config.php';
+$error = "";
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $error = "";
     $select = mysqli_query($conn, "select * from tbl_employee where email = '" . $email . "' and password = '" . md5($password) . "'");
     if ($row = mysqli_fetch_array($select)) {
         session_start();

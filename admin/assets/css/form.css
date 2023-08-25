@@ -53,13 +53,13 @@ select:focus {
 }
 
 form select {
-  width: 80%;
+  width: 81%;
   margin-top: 10px;
   border-radius: 6px;
   outline: none;
   border-style: none;
   border-bottom: 2px solid #000;
-  background-color: #fff;
+  background-color: #bae0ff;
   padding: 8px;
 }
 
@@ -78,16 +78,20 @@ form select {
   cursor: pointer;
 }
 
+.main fieldset .error {
+  color: red;
+}
+
 /* RESPONSIVENESS CODE */
 @media screen and (max-width: 600px) {
-  form{
+  form {
     width: 90%;
   }
-  
-  form input{
+
+  form input {
     width: 90%;
   }
-  form select{
+  form select {
     width: 95%;
   }
 }

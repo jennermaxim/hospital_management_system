@@ -1,4 +1,25 @@
 <?php include 'includes/config.php' ?>
+<?php
+$error = "";
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $contact = $_POST['contact'];
+    $email = $_POST['email'];
+    $location = $_POST['location'];
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+    if ($password === $cpassword) {
+        $insert = mysqli_query($conn, "insert into tbl_administrator(a_id, admin, contact, l_id, password, email) value(null, '" . $name . "', '" . $contact . "', '" . $location . "', '" . md5($password) . "', '" . $email . "')");
+        if ($insert) {
+            header('location:index.php');
+        } else {
+            $error .= "Failed to Insert...!";
+        }
+    } else {
+        $error .= "Password does not match...!";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +30,25 @@
     <link rel="shortcut icon" href="images/favicon.jpeg" type="image/jpeg">
     <link rel="stylesheet" href="assets/css/form.css" type="text/css">
     <style>
+        body {
+            background-color: rgb(223, 223, 223);
+        }
+
         fieldset {
-            width: 60%;
+            width: 510px;
             margin-top: 5%;
             border-radius: 16px;
-            background-color: gray;
+            background-color: #fff;
+            border: 1px solid #007ee5;
         }
 
         legend {
             text-align: center;
             padding: 8px;
-            background-color: burlywood;
-            width: 50%;
+            background-color: #007ee5;
             margin: 0;
             border-radius: 16px;
-        }
-
-        .success {
-            color: green;
-        }
-
-        .error {
-            color: red;
+            color: #fff;
         }
     </style>
 </head>
@@ -40,26 +58,9 @@
         <center>
             <fieldset>
                 <legend>Create an Admin Account</legend>
-                <?php
-                if (isset($_POST['submit'])) {
-                    $name = $_POST['name'];
-                    $contact = $_POST['contact'];
-                    $email = $_POST['email'];
-                    $location = $_POST['location'];
-                    $password = $_POST['password'];
-                    $cpassword = $_POST['cpassword'];
-                    if ($password === $cpassword) {
-                        $insert = mysqli_query($conn, "insert into tbl_administrator(a_id, admin, contact, l_id, password, email) value(null, '" . $name . "', '" . $contact . "', '" . $location . "', '" . md5($password) . "', '" . $email . "')");
-                        if ($insert) {
-                            header('location:index.php');
-                        } else {
-                            echo "<span class='error'><legend>Failed to Insert...!</legend></span>";
-                        }
-                    } else {
-                        echo "<span color='red' class='error'><legend>Password does not match...!</legend></span>";
-                    }
-                }
-                ?>
+                <span class="error">
+                    <?php echo $error; ?>
+                </span>
                 <form method="post">
                     <input type="text" name="name" id="" placeholder="Enter Your Name" required autofocus>
                     <input type="tel" name="contact" id="" placeholder="Enter Your Contact" required>
@@ -85,6 +86,11 @@
         </center>
     </div>
 </body>
-<script src="assests/js/script.js"></script>
+<script>
+    let error = document.querySelector(".main fieldset .error");
+    setTimeout(() => {
+        error.style.display = "none";
+    }, 10000);
+</script>
 
 </html>
