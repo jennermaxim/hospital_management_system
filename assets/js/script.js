@@ -21,9 +21,8 @@ let profile = document.querySelector("#profile");
 let profiledropdown = document.querySelector("#profiledropdown");
 
 profile.onclick = () => {
-  profiledropdown.classList.toggle("show");       
-}
-
+  profiledropdown.classList.toggle("show");
+};
 
 setTimeout(() => {
   for (i = 0; i < success.length; i++) {

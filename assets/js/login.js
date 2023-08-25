@@ -10,3 +10,8 @@ showpassword.onclick = () => {
     showpassword.src = "images/visible.png";
   }
 };
+
+let error = document.querySelector(".main fieldset .error");
+setTimeout(() => {
+  error.style.display = "none";
+}, 10000);

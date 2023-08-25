@@ -1,5 +1,14 @@
 <?php include 'includes/header.php'; ?>
-
+<?php
+$_SESSION['receiver'] = $_GET['em'];
+if (isset($_POST['submit'])) {
+    $message = $_POST['message'];
+    $insert = mysqli_query($conn, "insert into tbl_message(message_id, sender_id, receiver_id, message) values(null, '" . $_SESSION['login'] . "', '" . $_SESSION['receiver'] . "', '" . $message . "')");
+    if (!$insert) {
+        echo "<span class'error'>Failed to send the message</span>";
+    }
+}
+?>
 <div class="main dashboard">
     <?php include 'includes/sidebar.php' ?>
     <div class="workspace">
@@ -20,57 +29,13 @@
                     </form>
                 </div>
                 <div class="user-contact">
-                    <?php
-                    if (isset($_POST['submit'])) {
-                        $message = $_POST['message'];
-                        $insert = mysqli_query($conn, "insert into tbl_message(message_id, sender_id, receiver_id, message) values(null, '" . $_SESSION['login'] . "', '" . $_GET['em'] . "', '{$message}')");
-                        if (!$insert) {
-                            echo "<span class='error'>Failed to Send Message..!</span>";
-                        }
-                    }
-                    $select = mysqli_query($conn, "select * from tbl_message where (sender_id = '" . $_SESSION['login'] . "' or receiver_id = '" . $_SESSION['login'] . "' and sender_id = '" . $_GET['em'] . "' or receiver_id = '" . $_GET['em'] . "') order by message_id desc limit 1");
-                    while ($rowm = mysqli_fetch_assoc($select)) {
-                        if (mysqli_num_rows($select) > 0) {
-                            $lastmessage = $rowm['message'];
-                        } else {
-                            $lastmessage = "No message available";
-                        }
-                    }
-                    $select = mysqli_query($conn, "select * from tbl_employee where tbl_employee.employee_id != '" . $_SESSION['login'] . "'");
-                    while ($row = mysqli_fetch_assoc($select)) {
-                        if (mysqli_num_rows($select) > 0) {
-                            ?>
-                            <a href="messages.php?em=<?php echo $row['employee_id']; ?>">
-                                <div class="contact">
-                                    <div class="img-name-message">
-                                        <img src="images/favicon.jpeg" alt="">
-                                        <div class="name-message">
-                                            <div class="name">
-                                                <?php echo $row['fname'] . ' ' . $row['lname']; ?>
-                                            </div>
-                                            <div class="last-message">
-                                                <p>
-                                                    <?php echo $lastmessage; ?>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="time">4:58 PM</div>
-                                </div>
-                            </a>
-                            <?php
-                        } else {
-                            echo "<span class='nouser'>No User found</span>";
-                        }
-                    }
-                    ?>
+
                 </div>
             </div>
             <div class="contact-messages" id="contact-messages">
                 <?php
                 $select = mysqli_query($conn, "select * from tbl_employee where (employee_id != '" . $_SESSION['login'] . "' and employee_id = '" . $_GET['em'] . "')");
                 $row = mysqli_fetch_array($select);
-                $_SESSION['receiver'] = $_GET['em'];
                 ?>
                 <div class="message-bar">
                     <div class="contact-profile">
@@ -96,5 +61,6 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/contact.js"></script>
     <script src="assets/js/chat.js"></script>
     <?php include 'includes/footer.php'; ?>

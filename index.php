@@ -3,6 +3,7 @@ include 'includes/config.php';
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $error = "";
     $select = mysqli_query($conn, "select * from tbl_employee where email = '" . $email . "' and password = '" . md5($password) . "'");
     if ($row = mysqli_fetch_array($select)) {
         session_start();
@@ -11,7 +12,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['lname'] = $row['lname'];
         header('location:dashboard-employee.php');
     } else {
-        echo "<span class='error'>Ooops! Email or password is incorrect...!</span>";
+        $error .= "<span class='error'>Ooops! Email or password is incorrect...!</span>";
     }
 }
 ?>
@@ -31,6 +32,9 @@ if (isset($_POST['submit'])) {
         <center>
             <fieldset>
                 <legend>Login</legend>
+                <span class="error">
+                    <?php echo $error; ?>
+                </span>
                 <h2>Hospital Management System</h2>
 
                 <form method="post">
@@ -43,7 +47,7 @@ if (isset($_POST['submit'])) {
                         <input type="submit" value="Login" name="submit">
                         <input type="reset" value="Reset">
                     </div>
-                    <span>use the employee@gmail.com password:1234 to login</span>
+                    <span>Don't have an account yet? <a href="register.php">Register</a></span>
                     <span>Wanna login as an admin? <a href="admin">Click here</a></span>
                 </form>
             </fieldset>

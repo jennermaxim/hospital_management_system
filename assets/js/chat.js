@@ -25,3 +25,11 @@ setInterval(() => {
 let scrollFunction = (height) => {
   messagescroll.scrollTo(0, height);
 };
+
+let contactdisplay = document.querySelector(".contacts");
+let contact = document.querySelectorAll(".chat .contacts .user-contact a");
+for (let i = 0; i < contact.length; i++) {
+  contact[i].onclick = () => {
+    contactdisplay.style.display = "none";
+  };
+}
