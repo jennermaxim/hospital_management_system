@@ -19,7 +19,7 @@
             <span class="dropdown" onclick="displayBloodGroup();">Blood Group</span>
             <ul id="subbloodgroup" class="submenubar">
                 <li><a href="add-bloodgroup.php">Add Blood Group</a></li>
-                <li><a href="#">View Blood Group</a></li>
+                <li><a href="view-bloodgroup.php">View Blood Group</a></li>
             </ul>
         </li>
     </ul>

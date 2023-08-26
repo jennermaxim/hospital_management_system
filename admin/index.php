@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
                     <br>
                     <span>Don't have an account yet? <a href="signup.php">Sign UP</a></span>
                     <br>
-                    <span>Wanna login as a user <a href="../index.php">click here</a></span>
+                    <span>Wanna login as a user? <a href="../">click here</a></span>
                 </form>
             </fieldset>
         </center>

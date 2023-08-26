@@ -37,6 +37,6 @@ include 'config.php';
     <div class="profiledropdown" id="profiledropdown">
         <ul>
             <li><a href="#">Settings</a></li>
-            <li><a href="#">logout</a></li>
+            <li><a href="logout.php">logout</a></li>
         </ul>
     </div>

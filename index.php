@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
                         <input type="reset" value="Reset">
                     </div>
                     <span>Don't have an account yet? <a href="register.php">Register</a></span>
-                    <span>Wanna login as an admin? <a href="admin">Click here</a></span>
+                    <span>Wanna login as an admin? <a href="admin">click here</a></span>
                 </form>
             </fieldset>
         </center>
