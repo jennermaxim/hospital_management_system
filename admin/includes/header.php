@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php
-if(empty($_SESSION['login'])){
+if (empty($_SESSION['login'])) {
     header('location:index.php');
 }
 ?>
@@ -20,18 +20,17 @@ if(empty($_SESSION['login'])){
 
 <body>
     <nav class="header">
-    <div class="menu" onclick="displayMenu();"><img src="images/menu.png" alt="" width=30px></div>
+        <div class="menu" onclick="displayMenu();"><img src="images/menu.png" alt="" width=30px></div>
         <div class="logo"><img src="images/logo.jpeg" alt="" width=250px></div>
         <div class="menutabs">
             <ul>
-                <li><a href="#">Admin</a>
-                    <div class="subtub">
-                        <ul>
-                            <li><a href="dashboard.php"><?php echo $_SESSION['admin']; ?></a></li>
-                            <li><a href="logout.php" onclick="return confirm('We are sorry to see you leave...!');">Logout</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <li id="profile">Admin</li>
             </ul>
         </div>
     </nav>
+    <div class="profiledropdown" id="profiledropdown">
+        <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="logout.php">logout</a></li>
+        </ul>
+    </div>

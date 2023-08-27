@@ -1,10 +1,11 @@
 <div class="sidebar" id="sidebar">
     <ul>
+        <li><span><a href="dashboard.php">Dashboard</a></span></li>
         <li>
             <span onclick="displayEmployee();">Employee</span>
             <ul id="subemployee" class="submenubar">
                 <li><a href="add-employee.php">Add Employee</a></li>
-                <li><a href="#">View Employee</a></li>
+                <li><a href="view-employee.php">View Employee</a></li>
             </ul>
         </li>
         <li>

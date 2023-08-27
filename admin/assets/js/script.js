@@ -2,6 +2,12 @@ let success = document.querySelectorAll(".success");
 let error = document.querySelectorAll(".error");
 let i;
 let sidebar = document.querySelector("#sidebar");
+let profile = document.querySelector("#profile");
+let profiledropdown = document.querySelector("#profiledropdown");
+
+profile.onclick = () => {
+  profiledropdown.classList.toggle("show");
+};
 
 let displayMenu = () => {
   sidebar.classList.toggle("show");
@@ -16,30 +22,30 @@ setTimeout(() => {
   }
 }, 5000);
 
-let displayEmployee = () =>{
+let displayEmployee = () => {
   document.getElementById("subemployee").classList.toggle("show");
-}
+};
 
-let displayLocation = () =>{
+let displayLocation = () => {
   document.getElementById("sublocation").classList.toggle("show");
-}
+};
 
-let displayDoctor = () =>{
+let displayDoctor = () => {
   document.getElementById("subdoctor").classList.toggle("show");
-}
+};
 
-let displayDisease = () =>{
+let displayDisease = () => {
   document.getElementById("subdisease").classList.toggle("show");
-}
+};
 
-let displayPatient = () =>{
+let displayPatient = () => {
   document.getElementById("subpatient").classList.toggle("show");
-}
+};
 
-let displayStaff = () =>{
+let displayStaff = () => {
   document.getElementById("substaff").classList.toggle("show");
-}
+};
 
-let displayTitle = () =>{
+let displayTitle = () => {
   document.getElementById("subtitle").classList.toggle("show");
-}
+};

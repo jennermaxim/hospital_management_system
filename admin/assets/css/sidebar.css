@@ -1,128 +1,94 @@
-.sidebar{
-    width: 17%;
-    float: left;
-    background-color: rgb(25, 24, 24);
-    /* height: calc(100vh - 57px); */
-    height: 100%;
-    /* position: fixed; */
-    overflow-y: auto;
+.sidebar {
+  width: 17%;
+  float: left;
+  background-color: rgb(25, 24, 24);
+  /* height: calc(100vh - 57px); */
+  height: 100%;
+  /* position: fixed; */
+  overflow-y: auto;
 }
 
-.sidebar ul{
-    padding: 5%;
+.sidebar ul {
+  padding: 5%;
 }
 
-.sidebar ul li{
-    list-style: none;
-    /* width: 80%; */
-    /* padding: 10px; */
-    /* margin-top: 4px; */
-    /* background-color: #000; */
-    color: #fff;
+.sidebar ul li {
+  list-style: none;
+  color: #fff;
 }
 
-.sidebar ul li span{
-    padding: 10px;
-    display: block;
-    cursor: pointer;
+.sidebar ul li span {
+  padding: 10px;
+  display: block;
+  cursor: pointer;
 }
 
-.sidebar ul li span:hover{
-    background-color: #007ee5;
+.sidebar ul li span:hover {
+  background-color: #007ee5;
 }
 
-/* .sidebar ul li:hover{
-    background-color: rgb(52, 50, 50); 
-    cursor: pointer;
-    color: goldenrod;
-    text-transform: uppercase;
-} */
-
-/* .sidebar ul li .subtabs{
-    display: none;
-} */
-
-/* .sidebar ul li:hover .subtabs{
-    display: block;
-} */
-
-/* .sidebar ul li:hover .subtabs ul{
-    background-color: antiquewhite;
-    padding: 0.01%;
-} */
-
-/* .sidebar ul li:hover .subtabs ul li{
-    background-color: transparent;
-    padding: 2%;
-} */
-/* 
-.sidebar ul li:hover .subtabs li a{
-    text-decoration: none;
-    color: #000;
-} */
-
-/* .sidebar ul li:hover .subtabs li:hover, .sidebar ul li .subtabs a:hover{
-    background-color: rgb(216, 206, 206);
-    width: auto;
-} */
-
-.sidebar ul li ul{
-    padding: 10px;
-    background-color: #000;
+.sidebar ul li span a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.sidebar ul li ul li a{
-    padding: 10px;
-    display: block;
+.sidebar ul li ul {
+  padding: 10px;
+  background-color: #000;
 }
 
-.sidebar ul li ul li a:hover{
-    background-color: #007ee5;
+.sidebar ul li ul li a {
+  padding: 10px;
+  display: block;
 }
 
-.sidebar ul li ul li a{
-    text-decoration: none;
-    color: #fff;
+.sidebar ul li ul li a:hover {
+  background-color: #007ee5;
 }
 
-.submenubar{
-    display: none;
+.sidebar ul li ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.show{
-    display: block;
+.submenubar {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 /* RESPONSIVENESS CODE */
-@media screen and (max-width:850px) {
-    .sidebar{
-      display: none;
-      width: 50%;
-    }
-  
-    .main .sidebar{
-      width: 30%;
-    }
-  
-    .show {
-      display: block;
-    }
+@media screen and (max-width: 850px) {
+  .sidebar {
+    display: none;
+    width: 50%;
   }
-  
-  @media screen and (max-width:600px) {
-    .main{
-      display: block;
-    }
 
-    .main .sidebar{
-      width: 95%;
-      text-align: center;
-      padding: 2.5%;
-      height: fit-content;
-      /* padding-right: 20px; */
-    }
-
-    .main .sidebar ul{
-        padding: 0;
-    }
+  .main .sidebar {
+    width: 30%;
   }
+
+  .show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    display: block;
+  }
+
+  .main .sidebar {
+    width: 95%;
+    text-align: center;
+    padding: 2.5%;
+    height: fit-content;
+    /* padding-right: 20px; */
+  }
+
+  .main .sidebar ul {
+    padding: 0;
+  }
+}
