@@ -9,11 +9,16 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
     $cpassword = $_POST['cpassword'];
     if ($password === $cpassword) {
-        $insert = mysqli_query($conn, "insert into tbl_administrator(a_id, admin, contact, l_id, password, email) value(null, '" . $name . "', '" . $contact . "', '" . $location . "', '" . md5($password) . "', '" . $email . "')");
-        if ($insert) {
-            header('location:index.php');
+        $select = mysqli_query($conn, "select email from tbl_administrator where email = '" . $email . "' ");
+        if (mysqli_num_rows($select) > 0) {
+            $error .= "$email - This email is already exists!";
         } else {
-            $error .= "Failed to Insert...!";
+            $insert = mysqli_query($conn, "insert into tbl_administrator(a_id, admin, contact, l_id, password, email) value(null, '" . $name . "', '" . $contact . "', '" . $location . "', '" . md5($password) . "', '" . $email . "')");
+            if ($insert) {
+                header('location:index.php');
+            } else {
+                $error .= "Failed to Insert...!";
+            }
         }
     } else {
         $error .= "Password does not match...!";
