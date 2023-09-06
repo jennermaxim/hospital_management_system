@@ -23,11 +23,13 @@
             <br>
             <table>
                 <tr>
-                    <th colspan="3">LIST OF ADDED TITLES</th>
+                    <th colspan="5">LIST OF ADDED TITLES</th>
                 </tr>
                 <tr class="second-th">
                     <th>#</th>
                     <th>Title</th>
+                    <th>Create Time</th>
+                    <th>Update Time</th>
                     <th>Action</th>
                 </tr>
                 <?php
@@ -44,8 +46,14 @@
                             <?php echo $rowt['title']; ?>
                         </td>
                         <td>
-                            <a href="#">Delete</a>
-                            <a href="#">Update</a>
+                            <?php echo $rowt['create_time']; ?>
+                        </td>
+                        <td>
+                            <?php echo $rowt['update_time']; ?>
+                        </td>
+                        <td>
+                            <a href="delete-title.php?title=<?php echo $rowt['title_id']; ?>" onclick="return confirm('Are you sure you wanna delete <?php echo $rowt['title']; ?>');"><img src="images/delete.png" alt=""></a>
+                            <a href="update-title.php?title=<?php echo $rowt['title_id']; ?>"><img src="images/write.png" alt=""></a>
                         </td>
                     </tr>
                     <?php

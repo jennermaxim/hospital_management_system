@@ -3,27 +3,11 @@
     <?php include 'includes/sidebar.php'; ?>
     <div class="workspace">
         <center>
-            <h1>ADD DISEASE</h1>
+            <h1>WIEW DISEASE</h1>
             <hr>
-            <?php
-            if (isset($_POST['submit'])) {
-                $disease = $_POST['disease'];
-                $insert = mysqli_query($conn, "insert into tbl_disease (d_id, disease) values(null, '" . $disease . "')");
-                if ($insert) {
-                    echo "<span class='success'>Inserted Successfully!</span>";
-                } else {
-                    echo "<font color='red size='5px'>Failed to insert...!</font>";
-                }
-            }
-            ?>
-            <form method="post">
-                <input type="text" name="disease" id="" autofocus required placeholder="Enter Disease">
-                <input type="submit" value="Add Disease" name="submit" class="btn">
-            </form>
             <br>
             <table width="80%" border="2px" style="border-collapse: collapse;">
-                <th colspan="3" style="padding: 15px; background-color: #fff;">LIST OF ADDED DISEASE</th>
-                <tr style="background-color: rgb(229, 224, 224); padding: 10px">
+                <tr style="background-color: #ddd; padding: 10px">
                     <th style="padding: 10px">#</th>
                     <th style="padding: 10px">Disease</th>
                     <th style="padding: 10px">Action</th>
