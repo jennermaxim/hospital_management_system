@@ -1,13 +1,50 @@
 body {
-  background-color: rgb(223, 223, 223);
+  /* background-color: rgb(223, 223, 223); */
+  padding: 0;
+  padding: 0;
+}
+
+.main {
+  background: url("../../images/top.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgb(30, 63, 63);
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  /* overflow-y: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.login .img {
+  /* background-color: #007ee5; */
+  /* border-radius: 10px; */
+}
+
+.main .img img {
+  /* width: 440px; */
+  height: 100vh;
 }
 
 .main fieldset {
   width: 400px;
   border-radius: 10px;
   border: 1px solid #007ee5;
-  margin-top: 10%;
+  /* margin-bottom: 5%; */
+  /* margin-top: 5%; */
   background-color: #fff;
+  margin-left: -300px;
 }
 
 .main fieldset legend {
@@ -15,6 +52,10 @@ body {
   color: #fff;
   border-radius: 10px;
   padding: 10px;
+}
+
+.main fieldset h1{
+  display: none;
 }
 
 .main fieldset form {
@@ -74,12 +115,13 @@ body {
   width: 100%;
 }
 
-.main fieldset form .btn input[type="submit"] {
+.main fieldset form .btn .submit {
   background-color: #007ee5;
   border: none;
   color: #fff;
   cursor: pointer;
   font-size: large;
+  border-radius: 10px;
 }
 
 .main fieldset form .btn input[type="reset"] {
@@ -95,8 +137,50 @@ body {
 }
 
 /* RESPONSIVENESS CSS CODE */
+@media screen and (max-width: 1000px) {
+  .main fieldset{
+    margin-left: -400px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main fieldset{
+    margin-left: -500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main .img{
+    display: none;
+  }
+  .main fieldset{
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
+  .login {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
   .main fieldset {
-    width: 90%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .main fieldset h2{
+    display: none;
+  }
+
+  .main fieldset h1{
+    margin: 0;
+    display: block;
+  }
+
+  .main fieldset form input{
+    width: 92%;
   }
 }

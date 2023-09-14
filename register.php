@@ -51,6 +51,9 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="main">
+        <div class="img">
+            <img src="images/form.png" alt="">
+        </div>
         <center>
             <fieldset>
                 <legend>Register</legend>

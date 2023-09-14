@@ -28,7 +28,10 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="main">
+    <div class="main login">
+        <div class="img">
+            <img src="images/form.png" alt="">
+        </div>
         <center>
             <fieldset>
                 <legend>Login</legend>
@@ -36,7 +39,7 @@ if (isset($_POST['submit'])) {
                     <?php echo $error; ?>
                 </span>
                 <h2>Hospital Management System</h2>
-
+                <h1>HMS</h1>
                 <form method="post">
                     <input type="email" name="email" id="" placeholder="Enter Your Email" required autofocus>
                     <div class="password">
@@ -44,7 +47,8 @@ if (isset($_POST['submit'])) {
                         <img src="images/visible.png" alt="">
                     </div>
                     <div class="btn">
-                        <input type="submit" value="Login" name="submit">
+                        <button class="submit" name="submit">Submit</button>
+                        <!-- <input type="submit" value="Login" name="submit"> -->
                         <input type="reset" value="Reset">
                     </div>
                     <span>Don't have an account yet? <a href="register.php">Register</a></span>
