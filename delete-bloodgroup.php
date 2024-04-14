@@ -6,4 +6,3 @@ if ($delete) {
 } else {
     echo "<span class='error'>Failed to delete bloodgroup...!</span>";
 }
-?>
